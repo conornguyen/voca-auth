@@ -2,7 +2,7 @@
 **Project:** Voca Centralized Authentication & SSO Gateway
 **Architecture:** Decoupled Multi-tenant, Micro-services Ready, SSO Integrated.
 
-*Note for AI Assistant: Please read this entire file carefully before fulfilling any user request to write code, write tests, or design system architecture. Make sure to abide by the Next.js best practices outlined in `.agents/skills/dev/SKILL.MD`. All proposed solutions MUST strictly adhere to the rules below.*
+*Note for AI Assistant: Please read this entire file carefully before fulfilling any user request to write code, write tests, or design system architecture. Make sure to consult the "AI Skill Routing Matrix" below to load the appropriate specialized `.agents/skills/...` files before proposing solutions.*
 
 ---
 
@@ -67,8 +67,22 @@ The AI Assistant must strictly follow the 3-step workflow when asked to code a n
 
 ---
 
-## 6. PROMPT INSTRUCTIONS FOR AI
+## 6. AI SKILL ROUTING MATRIX
+When tasked with a particular domain, you (the AI) MUST load and read the internal instructions from the relevant skill directory before making changes:
+
+- **Business Analysis (`ba`)**: Use `.agents/skills/ba/SKILL.md` to break Epics or Ideas down into concrete User Stories and Acceptance Criteria.
+- **Technical Architecture (`tl`)**: Use `.agents/skills/tl/SKILL.md` to design system diagrams, data models, APIs, and ensure architectural constraints.
+- **Project Management (`pm`)**: Use `.agents/skills/pm/SKILL.md` to break User Stories down into granular, step-by-step developer tasks following the SDLC.
+- **Next.js & React (`nextjs-dev`)**: Always follow `.agents/skills/dev/SKILL.md` for UI, App Router, and Server Action constraints.
+- **Testing & TDD (`qa`)**: Always follow `.agents/skills/qa/SKILL.md` during the "RED PHASE" test generation.
+- **Database & Drizzle (`db`)**: Consult `.agents/skills/db/SKILL.md` whenever writing database schemas, migrations, or Drizzle ORM queries.
+- **Identity & Auth (`auth`)**: Consult `.agents/skills/auth/SKILL.md` when working with Firebase Authentication, JWTs, or session cookies.
+- **Cloud & Infrastructure (`infra`)**: Consult `.agents/skills/infra/SKILL.md` when working with CI/CD, Docker, or Google Cloud services.
+
+---
+
+## 7. PROMPT INSTRUCTIONS FOR AI
 When you (the AI) have read and understood this file, please reply to the user using the following format:
 1. Confirm that you have loaded and understood the context of the **Voca Centralized Authentication & SSO Gateway**.
 2. Confirm that you understand the critical security constraints regarding **Data Isolation (`tenant_id`)**, **JWT session minting**, and **Firebase Admin SDK usage**.
-3. State that you are waiting for the user's command to start the TDD cycle (Red Phase) for the first feature.
+3. State that you are waiting for the user's command to start the TDD cycle (Red Phase) or Architecture design for the first feature.
