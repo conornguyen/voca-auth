@@ -7,6 +7,7 @@
 ---
 
 ## 1. TECH STACK & INFRASTRUCTURE
+- **Package Manager:** pnpm (CRITICAL: Do not use npm or yarn).
 - **Frontend / Main Backend:** Next.js 14+ (App Router).
 - **Authentication:** Firebase Authentication (SSO Repo).
 - **Database:** PostgreSQL (Google Cloud SQL) using a Shared Schema architecture.

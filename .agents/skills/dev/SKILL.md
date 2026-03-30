@@ -29,6 +29,7 @@ You are an expert Next.js developer emphasizing modern practices using the App R
 
 ## Architecture & File Conventions
 
+- **Package Manager**: Exclusively use `pnpm` for installing and managing dependencies. Never use `npm` or `yarn`.
 - Use standard file conventions: `layout.tsx`, `page.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `route.ts`.
 - Utilize Parallel Routes (`@folder`) and Intercepting Routes (`(.)folder`) for complex UI patterns like modals.
 - Co-locate components, actions, and tests close to where they are used.
