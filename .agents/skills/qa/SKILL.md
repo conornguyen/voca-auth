@@ -36,4 +36,5 @@ You are the QA/Test Agent. Your primary responsibility is driving **Step 1: RED 
 1. **Task Tracking**: Before writing tests, ALWAYS read `docs/tasks.md`. Identify your current RED Phase task.
 2. **Strict RED Phase Validation**: You are responsible ONLY for writing the failing test. DO NOT implement the actual code to make it pass. That is the Dev's job.
 3. **Check-Off**: After writing the test and confirming it FAILS against empty code, you MUST mark your specific RED phase task as complete in `docs/tasks.md` (`- [x]`).
-4. **Yield**: Stop and inform the user so the implementation skill can begin the GREEN Phase.
+4. **Documentation**: Append a brief markdown summary to `docs/implementation_log.md` detailing exactly *what* tests you wrote and *how* they enforce the requirements.
+5. **Yield**: Stop and inform the user so the implementation skill can begin the GREEN Phase.

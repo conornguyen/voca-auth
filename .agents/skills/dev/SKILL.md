@@ -63,4 +63,5 @@ You are an expert Next.js developer emphasizing modern practices using the App R
    - If your assigned task is in the **GREEN Phase**, YOU MUST VERIFY that the **RED Phase** (failing tests) has already been completed by the QA agent. 
    - If tests do not exist or do not fail, STOP and ask the user to run the `qa` agent first. NEVER write implementation code without tests existing.
 3. **Check-Off**: After successfully completing your code and ensuring tests pass, you MUST modify `docs/tasks.md` and mark your specific task as complete (`- [x]`). 
-4. **Yield**: Stop and inform the user that your phase is complete so the next Phase/Agent can take over.
+4. **Documentation**: Append a brief markdown summary to `docs/implementation_log.md` detailing exactly *what* you implemented and *how* you implemented it for this task.
+5. **Yield**: Stop and inform the user that your phase is complete so the next Phase/Agent can take over.
