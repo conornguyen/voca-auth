@@ -56,7 +56,11 @@ You are an expert Next.js developer emphasizing modern practices using the App R
 - Authenticate and authorize every Server Action and Route Handler. Never assume the action is called by an authorized user based on UI state alone.
 - **Multi-Tenancy & RBAC**: Always verify `tenant_id` access and role permissions using the Firebase Auth token before fulfilling requests, per `AGENT.md` guidelines.
 
-## Testing & SDLC
+## Checklist & TDD Workflow (CRITICAL)
 
-- Follow the TDD (Red-Green-Refactor) workflow defined in `AGENT.md`.
-- Ensure tests validating Data Isolation (e.g. `tenant_id` isolation) are written prior to executing any direct mutations.
+1. **Task Tracking**: Before writing any code, ALWAYS read `docs/tasks.md`. Identify your current task. 
+2. **TDD Strict Enforcement**: 
+   - If your assigned task is in the **GREEN Phase**, YOU MUST VERIFY that the **RED Phase** (failing tests) has already been completed by the QA agent. 
+   - If tests do not exist or do not fail, STOP and ask the user to run the `qa` agent first. NEVER write implementation code without tests existing.
+3. **Check-Off**: After successfully completing your code and ensuring tests pass, you MUST modify `docs/tasks.md` and mark your specific task as complete (`- [x]`). 
+4. **Yield**: Stop and inform the user that your phase is complete so the next Phase/Agent can take over.

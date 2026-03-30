@@ -30,3 +30,10 @@ You are the QA/Test Agent. Your primary responsibility is driving **Step 1: RED 
 - Use clear `describe` and `it` blocks that map directly to the business requirements provided in the plan.
 - Mock external services (like Firebase Auth or Google Cloud Pub/Sub) heavily to keep unit tests fast and deterministic.
 - Utilize Drizzle ORM testing utilities or in-memory DB setups to test database transactions and `tenant_id` isolation cleanly.
+
+## Checklist & TDD Workflow (CRITICAL)
+
+1. **Task Tracking**: Before writing tests, ALWAYS read `docs/tasks.md`. Identify your current RED Phase task.
+2. **Strict RED Phase Validation**: You are responsible ONLY for writing the failing test. DO NOT implement the actual code to make it pass. That is the Dev's job.
+3. **Check-Off**: After writing the test and confirming it FAILS against empty code, you MUST mark your specific RED phase task as complete in `docs/tasks.md` (`- [x]`).
+4. **Yield**: Stop and inform the user so the implementation skill can begin the GREEN Phase.
