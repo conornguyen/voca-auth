@@ -68,8 +68,11 @@ The AI Assistant must strictly follow the 3-step workflow when asked to code a n
 ---
 
 ## 6. AI SKILL ROUTING MATRIX
-When tasked with a particular domain, you (the AI) MUST load and read the internal instructions from the relevant skill directory before making changes:
+When tasked with a particular domain, you (the AI) MUST load and read the internal instructions from the relevant skill directory located at `@.agents/skills/` before making changes.
 
+> **Skill Mapping Rule:** Whenever a newly specialized skill is created in the `.agents/skills/` directory, it MUST be mapped and added to this matrix. This ensures the AI knows to include and consult it when needed.
+
+- **Planning (`plan`)**: Consult `.agents/skills/plan/SKILL.md` before implementing tasks, writing test cases for TDD, or drafting epics, architecture, SRS, and task breakdowns.
 - **Business Analysis (`ba`)**: Use `.agents/skills/ba/SKILL.md` to break Epics or Ideas down into concrete User Stories and Acceptance Criteria.
 - **Technical Architecture (`tl`)**: Use `.agents/skills/tl/SKILL.md` to design system diagrams, data models, APIs, and ensure architectural constraints.
 - **Project Management (`pm`)**: Use `.agents/skills/pm/SKILL.md` to break User Stories down into granular, step-by-step developer tasks following the SDLC.
