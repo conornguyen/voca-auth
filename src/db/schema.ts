@@ -36,3 +36,11 @@ export const outboxEvents = pgTable("outbox_events", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
+
+export const allowedRedirectDomains = pgTable("allowed_redirect_domains", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  domain: varchar("domain", { length: 255 }).notNull().unique(),
+  description: varchar("description", { length: 500 }),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+

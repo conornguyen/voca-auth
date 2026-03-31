@@ -47,3 +47,45 @@ Phase Markers: `[RED]` = Test writing, `[GREEN]` = Feature coding, `[REFACTOR]` 
   - Wire it inside the `createWorkspace` completion lifecycle.
 - [x] **Task 12: Network Resilience / Retry Logic** *(Phase: REFACTOR)* - [Skill: `infra`]
   - Opt into an Outbox pattern or add robust try-catch blocks ensuring PubSub publisher network failures do not arbitrarily roll back the Database transaction if the tenant was already successfully inserted.
+
+---
+
+## Epic 2: Unified Landing & SSO Portal
+
+### US 2.1: UI Framework Setup (Tailwind & Shadcn)
+
+- [x] **Task 13: Write Failing Tests for Landing Page** *(Phase: RED)* - [Skill: `qa`]
+  - Jest + React Testing Library: Assert the root page renders with `Voca Auth` hero title.
+  - Assert the page contains Login/Register tab toggles.
+- [x] **Task 14: Initialize Tailwind CSS, Shadcn/ui & Landing Page** *(Phase: GREEN)* - [Skill: `nextjs-dev`]
+  - Install Tailwind v4, `@tailwindcss/postcss`, shadcn/ui.
+  - Create `layout.tsx`, `page.tsx`, `globals.css`, `AuthForms.tsx`.
+  - All RED tests pass.
+- [ ] **Task 15: Responsive Polish & Config Cleanup** *(Phase: REFACTOR)* - [Skill: `pm` / `plan`]
+  - Refine responsive breakpoints, animation polish, `.gitignore` updates.
+
+### US 2.2: Email/Password Auth (Login & Register)
+
+- [x] **Task 16: Write Failing Tests for Auth Forms** *(Phase: RED)* - [Skill: `qa`]
+  - Assert Zod validation errors on empty form submission.
+  - Assert `signInWithEmailAndPassword` / `createUserWithEmailAndPassword` called on valid input.
+- [x] **Task 17: Implement Auth Forms with react-hook-form + Zod** *(Phase: GREEN)* - [Skill: `auth` & `nextjs-dev`]
+  - Email/Password login and registration via Firebase Client SDK.
+  - Connect to `POST /api/auth/session` for wildcard cookie minting.
+  - Integrated `react-hook-form` + `@hookform/resolvers` + Zod validation.
+  - All RED tests pass.
+- [ ] **Task 18: Refine Form UX & Error Handling** *(Phase: REFACTOR)* - [Skill: `nextjs-dev`]
+  - Enhance Shadcn Form component usage, loading states, error toasts.
+
+### US 2.3: Redirection & Whitelist Security
+
+- [x] **Task 19: Write Failing Tests for Redirect Validation** *(Phase: RED)* - [Skill: `qa`]
+  - Assert `*.voca.com` allowed, DB-whitelisted domains allowed.
+  - Assert Open Redirect attacks rejected (javascript:, data:, unknown domains).
+- [x] **Task 20: Implement DB-backed Redirect Validation** *(Phase: GREEN)* - [Skill: `db` & `auth`]
+  - Create `allowed_redirect_domains` Drizzle schema table.
+  - Implement `validateRedirectUrl()` in `src/lib/redirect-validation.ts`.
+  - Wire into `GET /api/auth/validate-redirect` route.
+  - All 9 redirect tests pass.
+- [ ] **Task 21: Encapsulate Redirect Logic Cleanly** *(Phase: REFACTOR)* - [Skill: `tl`]
+  - Create a clean `useSSORedirect` hook or server-side helper.
