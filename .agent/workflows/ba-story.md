@@ -6,7 +6,12 @@ description: BA — Write a user story from business need to dev-ready
 
 Use this workflow whenever a new feature request, bug, or product idea needs to be translated into a dev-ready user story for `voca-auth`.
 
-1. **Identify the persona** — Determine which RBAC role is affected: `Admin`, `Owner`, `Manager`, `Staff`, or `Customer`. Reference `docs/rbac_roles_and_skills.md`.
+**Prerequisite Skills:**
+- Use `ask-questions-if-underspecified` before writing a story to clarify any ambiguous requirements.
+- Use `concise-planning` to break down an Epic into an atomic, actionable story checklist before writing individual stories.
+- Use `product-manager-toolkit` to apply discovery frameworks (jobs-to-be-done, user personas) if needed.
+
+1. **Identify the persona** — Determine which RBAC role is affected: `Admin`, `Owner`, `Manager`, `Staff`, or `Customer`. Reference and update `docs/rbac_roles_and_skills.md` if new definitions are necessary.
 
 2. **Draft the user story** in the standard format:
    ```
@@ -26,4 +31,4 @@ Use this workflow whenever a new feature request, bug, or product idea needs to 
 
 6. **Attach NFRs** — If the story has latency, scale, or security constraints, attach them explicitly (reference `docs/epic.md §4`).
 
-7. **Hand off to PM** — Add the story to the backlog with label: `[status: ready-for-grooming]`.
+7. **Hand off to PM & Update Deliverables** — Update Epic briefs (`docs/epic.md`) if the feature scope expands. Finally, add the dev-ready story to the backlog with label: `[status: ready-for-grooming]`.
