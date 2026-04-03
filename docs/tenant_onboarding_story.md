@@ -4,7 +4,6 @@
 
 ## 1. Persona
 **Tenant Owner (Owner)**
-*Reference:* `docs/rbac_roles_and_skills.md`
 
 ## 2. User Story
 **As a** Tenant Owner,

@@ -33,7 +33,7 @@ Stakeholder → BA → Epic Breakdown → PM → Architect → Dev → QA → De
 | `writing-plans` | Convert a business need into a phased story plan |
 | `ddd-context-mapping` | Map story boundaries across bounded contexts (auth ↔ tenant ↔ events) |
 
-**Key Deliverables:** Epic briefs (`docs/epic.md`), user stories with Acceptance Criteria, persona definitions (`docs/rbac_roles_and_skills.md`)
+**Key Deliverables:** Epic briefs (`docs/epic.md`), user stories with Acceptance Criteria, persona definitions
 
 ---
 
